@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerador de QR Code</title>
+</head>
+<body>
+  <h1>Gerador de QR Code</h1>
+
+  <!-- Adicione uma área para exibir o QR Code -->
+  <div id="qrcode"></div>
+
+  <script src="qrcode.min.js"></script>
+
+  <script>
+    // Passo 1: Importe a biblioteca qrcode-generator
+    // Certifique-se de incluir a biblioteca qrcode.min.js no mesmo diretório que este arquivo HTML.
+
+    // Passo 2: Crie um objeto QRCode
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Substitua com o URL desejado
+      width: 128, // Largura do QR Code em pixels
+      height: 128 // Altura do QR Code em pixels
+    });
+
+    // Passo 3: Renderize o QR Code
+    qrcode.makeCode();
+
+    // Passo 4: O QR Code é exibido na div com o id "qrcode"
+
+  </script>
+</body>
+</html>
